@@ -11,3 +11,5 @@ router.get('/staff' , userController.staffPage)
 router.get('/principals' , userController.principalsPage)
 
 router.get('/principles' , userController.principlesPage)
+
+module.exports = router;
