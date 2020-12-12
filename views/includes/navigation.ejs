@@ -7,7 +7,7 @@
                 </nav>
             </div> 
         </div>
-        <div class="container-fluid bg-light">
+        <div class="container-fluid bg-light sticky-menu">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <button button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +15,14 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="../user/home.ejs">صفحه اصلی</a>
+                            <li class="nav-item <%= path === '/home' ? 'active' : ''%>">
+                                <a class="nav-link" href="../user/home.ejs">صفحه اصلی</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="#">راهنمای کاربران</a>
+                            <li class="nav-item <%= path === '/' ? 'active' : ''%>">
+                                <a class="nav-link" href="#">راهنمای کاربران</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="#">خدمات مرکز</a>
+                            <li class="nav-item <%= path === '/' ? 'active' : ''%>">
+                                <a class="nav-link" href="#">خدمات مرکز</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,11 +36,11 @@
                                     <a class="dropdown-item <%= path === '/principles' ? 'active' : ''%>" href="../user/principles.ejs">قوانین و آیین نماه ها</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= path === '/contact' ? 'active' : ''%>" href="../user/contact.ejs">ارتباط با مرکز</a>
+                            <li class="nav-item <%= path === '/contact' ? 'active' : ''%>">
+                                <a class="nav-link" href="../user/contact.ejs">ارتباط با مرکز</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link <%= path === '/cooperation' ? 'active' : ''%>" href="../user/cooperation.ejs">دعوت به همکاری</a>
+                            <li class="nav-item <%= path === '/cooperation' ? 'active' : ''%>">
+                                <a class="nav-link" href="../user/cooperation.ejs">دعوت به همکاری</a>
                             </li>
                         </ul>
                     </div>
