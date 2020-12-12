@@ -26,3 +26,17 @@ exports.principlesPage = (req, res, next) => {
         path: '/principles'
     });
 };
+
+exports.principlesPage = (req, res, next) => {
+    res.render('user/contact', {
+        pageTitle: 'ارتباط با مرکز',
+        path: '/contact'
+    });
+};
+
+exports.principlesPage = (req, res, next) => {
+    res.render('user/cooperation', {
+        pageTitle: 'دعوت به همکاری',
+        path: '/cooperation'
+    });
+};
