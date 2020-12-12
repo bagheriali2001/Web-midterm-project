@@ -40,3 +40,10 @@ exports.principlesPage = (req, res, next) => {
         path: '/cooperation'
     });
 };
+
+exports.homePage = (req, res, next) => {
+    res.render('user/home', {
+        pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
+        path: '/home'
+    });
+};

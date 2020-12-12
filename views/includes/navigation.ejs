@@ -3,7 +3,7 @@
         <div class="container-fluid bg-info">
            <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand m-0" href="#"><img src="../images/navigation/logo-menu.png" width="200" height="45" alt=""></a>
+                    <a class="navbar-brand m-0" href="#"><img src="images/navigation/logo-menu.png" width="200" height="45" alt=""></a>
                 </nav>
             </div> 
         </div>
@@ -16,31 +16,31 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto mx-auto">
                             <li class="nav-item active">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''" href="../home.ejs">صفحه اصلی</a>
+                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="../user/home.ejs">صفحه اصلی</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''" href="#">راهنمای کاربران</a>
+                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="#">راهنمای کاربران</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <%= path === '/' ? 'active' : ''" href="#">خدمات مرکز</a>
+                                <a class="nav-link <%= path === '/' ? 'active' : ''%>" href="#">خدمات مرکز</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     معرفی و قوانین
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item <%= path === '/introduction' ? 'active' : ''" href="../introduction.ejs">معرفی مرکز و اهداف</a>
-                                    <a class="dropdown-item <%= path === '/staff' ? 'active' : ''" href="../staff.ejs">معرفی افراد و پرسنل</a>
-                                    <a class="dropdown-item <%= path === '/principals' ? 'active' : ''" href="../principals.ejs">روسای مرکز</a>
+                                    <a class="dropdown-item <%= path === '/introduction' ? 'active' : ''%>" href="../user/introduction.ejs">معرفی مرکز و اهداف</a>
+                                    <a class="dropdown-item <%= path === '/staff' ? 'active' : ''%>" href="../user/staff.ejs">معرفی افراد و پرسنل</a>
+                                    <a class="dropdown-item <%= path === '/principals' ? 'active' : ''%>" href="../user/principals.ejs">روسای مرکز</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item <%= path === '/principles' ? 'active' : ''" href="../principles.ejs">قوانین و آیین نماه ها</a>
+                                    <a class="dropdown-item <%= path === '/principles' ? 'active' : ''%>" href="../user/principles.ejs">قوانین و آیین نماه ها</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <%= path === '/contact' ? 'active' : ''" href="../contact.ejs">ارتباط با مرکز</a>
+                                <a class="nav-link <%= path === '/contact' ? 'active' : ''%>" href="../user/contact.ejs">ارتباط با مرکز</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <%= path === '/cooperation' ? 'active' : ''" href="../cooperation.ejs">دعوت به همکاری</a>
+                                <a class="nav-link <%= path === '/cooperation' ? 'active' : ''%>" href="../user/cooperation.ejs">دعوت به همکاری</a>
                             </li>
                         </ul>
                     </div>

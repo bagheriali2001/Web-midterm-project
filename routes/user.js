@@ -12,4 +12,6 @@ router.get('/principals' , userController.principalsPage)
 
 router.get('/principles' , userController.principlesPage)
 
+router.get('/home' , userController.homePage)
+
 module.exports = router;
