@@ -37,55 +37,54 @@
             </div>
         </section>
 
-
         <section class="news float-left w-100 py-4">
             <div class="container">
                 <div class="news-content float-left w-100">
                     <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light">
                         <img class="card-img-top mx-auto img-news" src="images/news/download-image.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-center">  تیتر خبر تیتر خبر</h5>
-                            <p class="card-text text-center">			پیرو بروزرسانی هسته‌ی شبکه‌ی دانشگاه و همچنین ارتقای لینک‌های ارتباطی و با توجه به درخواست متعدد دانشجویان در...		</p>
+                            <h5 class="card-title text-center"><%= news[0].title %></h5>
+                            <p class="card-text text-center"><%= news[0].description %></p>
                             <div class="">
-                                <button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button>
+                                <a href="/news/<%= news[0].id %>"><button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button></a>
     
-                                <time class="float-left">1398/10/23</time>
+                                <time class="float-left"><%= news[0].date %></time>
                             </div>
                         </div>
                     </div>
                     <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light">
                         <img class="card-img-top mx-auto img-news" src="images/news/sms-service.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-center">  تیتر خبر تیتر خبر</h5>
-                            <p class="card-text text-center">			پیرو بروزرسانی هسته‌ی شبکه‌ی دانشگاه و همچنین ارتقای لینک‌های ارتباطی و با توجه به درخواست متعدد دانشجویان در...		</p>
+                            <h5 class="card-title text-center"><%= news[1].title %></h5>
+                            <p class="card-text text-center"><%= news[1].description %></p>
                             <div class="">
-                                <button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button>
+                                <a href="/news/<%= news[1].id %>"><button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button></a>
     
-                                <time class="float-left">1398/10/23</time>
+                                <time class="float-left"><%= news[1].date %></time>
                             </div>
                         </div>
                     </div>
                     <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light">
                         <img class="card-img-top mx-auto img-news" src="images/news/video-stream.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-center">  تیتر خبر تیتر خبر</h5>
-                            <p class="card-text text-center">			پیرو بروزرسانی هسته‌ی شبکه‌ی دانشگاه و همچنین ارتقای لینک‌های ارتباطی و با توجه به درخواست متعدد دانشجویان در...		</p>
+                            <h5 class="card-title text-center"><%= news[2].title %></h5>
+                            <p class="card-text text-center"><%= news[2].description %></p>
                             <div class="">
-                                <button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button>
+                                <a href="/news/<%= news[2].id %>"><button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button></a>
     
-                                <time class="float-left">1398/10/23</time>
+                                <time class="float-left"><%= news[2].date %></time>
                             </div>
                         </div>
                     </div>
                     <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light">
                         <img class="card-img-top mx-auto img-news" src="images/news/JCVqX0V-thum.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-center">  تیتر خبر تیتر خبر</h5>
-                            <p class="card-text text-center">			پیرو بروزرسانی هسته‌ی شبکه‌ی دانشگاه و همچنین ارتقای لینک‌های ارتباطی و با توجه به درخواست متعدد دانشجویان در...		</p>
+                            <h5 class="card-title text-center"><%= news[3].title %></h5>
+                            <p class="card-text text-center"><%= news[3].description %></p>
                             <div class="">
-                                <button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button>
+                                <a href="/news/<%= news[3].id %>"><button type="button" class="btn btn-outline-info p-1 float-right">ادامه اخبار</button></a>
     
-                                <time class="float-left">1398/10/23</time>
+                                <time class="float-left"><%= news[3].date %></time>
                             </div>
                         </div>
                     </div>
