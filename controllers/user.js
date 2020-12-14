@@ -47,9 +47,9 @@ exports.cooperationPage = (req, res, next) => {
 exports.homePage = (req, res, next) => {
     News.max('id').then(max =>{
         News.findAll( {where:{id: {[Op.gt]: max-4}}})
-        .then(products => {
+        .then(news => {
             res.render('user/home', {
-                news : products,
+                news : news,
                 pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
                 path: '/home'
             });
