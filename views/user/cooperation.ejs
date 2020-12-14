@@ -1,0 +1,59 @@
+<%- include('../includes/head.ejs') %>
+
+    <link rel="stylesheet" href="css/cooperation.css">
+</head>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main class="float-left w-100">
+        <section class="cooperation float-left w-100 pb-5 text-dark">
+            <div class="container d-flex justify-content-center pt-3">
+                <h2>دعوت به همکاری</h2>
+            </div>
+        </section>
+
+        <section class="cooperation float-left w-100 pb-5 text-dark">
+            <div class="container">
+                <div class="float-left w-100 d-md-flex align-items-center">
+                    <div class="cooperation-form-container col-12 col-md-6 order-md-1 float-right">
+                        <form class="contact-form mx-auto">
+                            <div class="form-group">
+                                <label for="name">نام و نام خانوادگی: </label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">ایمیل:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">شماره تماس:</label>
+                                <input type="text" class="form-control" id="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">زمینه علاقه:</label>
+                                <input type="text" class="form-control" id="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">توضیحات:</label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">ارسال</button>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-2 float-right">
+                        <img class="cooperation-img w-100" src="images/cooperation/cooperation.jpg" alt="">
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../includes/footer.ejs') %>
+
+<%- include('../includes/end.ejs') %>
