@@ -1,0 +1,35 @@
+<%- include('../includes/head.ejs') %>
+
+    </head>
+
+    <body>
+        <%- include('../includes/adminNavigation.ejs') %>
+        <main class="float-left w-100">
+            <section class="news float-left w-100 py-4">
+                <div class="container">
+                    <div class="news-content float-left w-100">
+                        <% for(var i = 0; i < cooperations.length; i++) { %>                        <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light" style="height: 450px;">
+                            <div class="card-body">
+                                <p class="card-text">نام و نام خانوادگی: </p>
+                                <p class="card-text"><%= cooperations[i].name %></p>
+                                <p class="card-text">ایمیل:</p>
+                                <p class="card-text"><%= cooperations[i].email %></p>
+                                <p class="card-text">شماره تماس:</p>
+                                <p class="card-text"><%= cooperations[i].phoneNumber %></p>
+                                <p class="card-text">زمینه علاقه:</p>
+                                <p class="card-text"><%= cooperations[i].interest %></p>
+                                <p class="card-text">توضیحات:</p>
+                                <p class="card-text"><%= cooperations[i].description %></p>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>  
+            </section>
+                       
+        </main>
+
+        <%- include('../includes/footer.ejs') %>
+
+<%- include('../includes/end.ejs') %>
+            
