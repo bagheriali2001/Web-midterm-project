@@ -8,4 +8,9 @@ router.get('/addnews' , adminController.addnewsGet)
 
 router.post('/addnews/add' , adminController.addnewsPost)
 
+router.get('/contactRequest' , adminController.contactRequest)
+
+router.get('/cooperationRequest' , adminController.cooperationRequest)
+
+
 module.exports = router;
