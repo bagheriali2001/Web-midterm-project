@@ -1,0 +1,63 @@
+<%- include('../includes/head.ejs') %>
+
+    <link rel="stylesheet" href="css/contact.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="float-left w-100">
+            <section class="float-left w-100 py-4 bg-light">
+                <div class="container d-flex justify-content-center">
+                    <h2>ارتباط با مرکز</h2>
+                </div>
+            </section>
+            
+            <section class="float-left w-100 py-4">
+                <div class="container">
+                    <form class="contact-form mx-auto">
+                        <div class="form-group">
+                            <label for="name">نام و نام خانوادگی: </label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                        <div class="form-group">
+                            <label for="subject">موضوع:</label>
+                            <input type="text" class="form-control" id="subject">
+                          </div>
+                        <div class="form-group">
+                          <label for="email">ایمیل:</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="emailBody">متن نظر:</label>
+                          <textarea class="form-control" id="emailBody" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ارسال</button>
+                      </form>
+                </div>
+            </section>
+            
+            <section class="contact-info float-left w-100 py-4 bg-light">
+                <div class="container">
+                    <div class="col-12 col-md-6 float-right">
+                        <h3 class="heading py-2">اطلاعات تماس</h3>
+                        <ul class="list-unstyled p-0">
+                            <li><i class="fa fa-map-marker" style="padding-left: 10px;"></i>نشانی: مازندران، بابل، خیابان شریعتی، دانشگاه صنعتی نوشیروانی بابل</li>
+                            <li><i class="fa fa-at" style="padding-left: 10px;"></i>پست الکترونیکی: pr@nit.ac.ir</li>
+                            <li><i class="fa fa-phone" style="padding-left: 10px;"></i>تلفن مرکز دانشگاه: 01132332071-4</li>
+                            <li><i class="fa fa-fax" style="padding-left: 10px;"></i>دورنگار: 01132334201</li>
+                            <li><i class="fa fa-envelope" style="padding-left: 10px;"></i>کد پستی: 47148-73113</li>
+                            <li><i class="fa fa-envelope" style="padding-left: 10px;"></i>صندوق پستی: 484</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 float-right">
+                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.7082983596424!2d52.67838821463286!3d36.5611457888205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8f88155391a6cb%3A0x381087fd25f45508!2sBabol%20Noshirvani%20University%20of%20Technology%20(BUT)!5e0!3m2!1sen!2s!4v1607932755093!5m2!1sen!2s" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>       
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <%- include('../includes/footer.ejs') %>
+
+<%- include('../includes/end.ejs') %>
+            

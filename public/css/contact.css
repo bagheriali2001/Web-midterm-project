@@ -1,0 +1,20 @@
+.contact-form {
+    max-width: 450px;
+    font-weight: 500;
+}
+
+.contact-info .heading {
+    font-weight: 700;
+}
+.contact-info li {
+    font-weight: 500;
+    line-height: 200%;
+}
+
+.google-map {
+    margin: auto;
+    max-width: 500px;
+    height: 500px;
+    border: 0;
+}
+
