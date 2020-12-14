@@ -1,5 +1,3 @@
-const Sequelize = require('sequelize')
-
 const News = require('../models/news')
 
 exports.addnewsGet = (req, res, next) => {
@@ -23,6 +21,7 @@ exports.addnewsPost = (req, res, next) => {
         date : date
     }).then(result => {
         console.log("Added!")
+        res.redirect('/addnews')
     }).catch(err => {
         console.log(err)
     })

@@ -1,3 +1,6 @@
+const News = require('../models/news')
+
+
 exports.introductionPage = (req, res, next) => {
     res.render('user/introduction', {
         pageTitle: 'معرفی مرکز و اهداف',
@@ -42,8 +45,32 @@ exports.cooperationPage = (req, res, next) => {
 };
 
 exports.homePage = (req, res, next) => {
-    res.render('user/home', {
-        pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
-        path: '/home'
-    });
+    News.max('id').then(max =>{
+        News.findAll( {where:{id: {[Op.gt]: max-4}}})
+        .then(products => {
+            res.render('user/home', {
+                news : products,
+                pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
+                path: '/home'
+            });
+        }).catch(err => {
+            console.log(err)
+        })
+    })
+    
+    
 };
+
+exports.getOneNews = (req, res, next) =>{
+    const newsId = req.params.newsId
+    News.findAll({where : {id : newsId}})
+        .then(news => {
+            res.render('user/news-detail', {
+                news : news[0],
+                pageTitle: news.title,
+                path: '/news/'+ news.title
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+} 

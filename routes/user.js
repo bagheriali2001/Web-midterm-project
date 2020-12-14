@@ -18,4 +18,6 @@ router.get('/cooperation' , userController.cooperationPage)
 
 router.get('/contact' , userController.contactPage)
 
+router.get('/news/:newsId' , userController.getOneNews)
+
 module.exports = router;
