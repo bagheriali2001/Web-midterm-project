@@ -18,7 +18,7 @@ const News = sequelize.define('news', {
         allowNull: false
     },
     date:{
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false
     },
     author:{
@@ -28,5 +28,7 @@ const News = sequelize.define('news', {
     text:{
         type: Sequelize.STRING,
         allowNull: false
-    },
+    }
 });
+
+module.exports = News

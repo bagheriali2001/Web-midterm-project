@@ -7,3 +7,5 @@ const router = express.Router();
 router.get('/addnews' , adminController.addnewsGet)
 
 router.post('/addnews/add' , adminController.addnewsPost)
+
+module.exports = router;
