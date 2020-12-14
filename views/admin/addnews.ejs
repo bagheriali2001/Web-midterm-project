@@ -1,17 +1,54 @@
+
 <%- include('../includes/head.ejs') %>
 
+    <link rel="stylesheet" href="css/addnews.css">
     </head>
 
     <body>
-        <form action="/addnews/add" method="POST">
-            <input type="text" name="title" id="title">
-            <input type="text" name="description" id="description">
-            <input type="text" name="text" id="text">
-            <input type="text" name="author" id="author">
-            <input type="text" name="date" id="date">
-            <button type="submit">Add</button>
-        </form>
+        <%- include('../includes/adminNavigation.ejs') %>
+        <main class="float-left w-100">
+            <section class="float-left w-100 py-4 bg-light">
+                <div class="container d-flex justify-content-center">
+                    <h2>ایجاد خبر جدید</h2>
+                </div>
+            </section>
+            
+            <section class="float-left w-100 py-4">
+                <div class="container">
+                    <form class="news-form mx-auto" action="/addnews/add" method="POST">
+                        <div class="form-group">
+                            <label for="title">عنوان خبر:</label>
+                            <input type="text" class="form-control" name="title" id="title">
+                          </div>
+
+                        <div class="form-group">
+                            <label for="description">توضیحات:</label>
+                            <input type="text" class="form-control"  name="description" id="description">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">متن خبر:</label>
+                            <textarea class="form-control" rows="3"  name="text" id="text"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">نویسنده:</label>
+                            <input type="text" class="form-control" name="author" id="author">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">تاریخ:</label>
+                            <input type="text" class="form-control" name="date" id="date">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">ارسال</button>
+                      </form>
+                </div>
+            </section>
+        </main>
+
         <%- include('../includes/footer.ejs') %>
 
 <%- include('../includes/end.ejs') %>
+            
             

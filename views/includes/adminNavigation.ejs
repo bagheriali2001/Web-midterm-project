@@ -1,0 +1,38 @@
+<header class="sticky-top">
+    <div class="container-fluid">
+        <div class="container-fluid bg-info">
+           <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand m-0" href="#"><img src="images/navigation/logo-menu.png" width="200" height="45" alt=""></a>
+                </nav>
+            </div> 
+        </div>
+        <div class="container-fluid bg-light sticky-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto mx-auto">
+                            <li class="nav-item <%= path === '/addnews' ? 'active' : ''%>">
+                                <a class="nav-link" href="/addnews">ایجاد خبر</a>
+                            </li>
+                            <li class="nav-item <%= path === '/addguide' ? 'active' : ''%>">
+                                <a class="nav-link" href="/addguide">ایجاد راهنما</a>
+                            </li>
+                            <li class="nav-item <%= path === '/contactRequest' ? 'active' : ''%>">
+                                <a class="nav-link" href="/contactRequest">درخواست های تماس</a>
+                            </li>
+                            <li class="nav-item <%= path === '/cooperationRequest' ? 'active' : ''%>">
+                                <a class="nav-link" href="/cooperationRequest">درخواست های همکاری</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div> 
+        </div>
+        
+    </div>
+</header>
