@@ -1,3 +1,19 @@
 .news .news-content .img-news {
-    min-height: 200px;
+    height: 200px;
+    max-width: 300px;
+}
+.news .news-content .news-card {
+    height: 450px;
+}
+
+.system-users li,
+.active-systems li {
+    padding-left: 10px;
+    font-weight: 500;
+    line-height: 200%;
+}
+
+.system-users li i,
+.active-systems li i {
+    padding-left: 10px;
 }
