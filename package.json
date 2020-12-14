@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/bagheriali2001/Web-midterm-project#readme",
   "dependencies": {
+    "connect-pg-simple": "^6.2.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "pg": "^8.5.1"
+    "express-session": "^1.17.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   }
 }

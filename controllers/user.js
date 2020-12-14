@@ -27,14 +27,14 @@ exports.principlesPage = (req, res, next) => {
     });
 };
 
-exports.principlesPage = (req, res, next) => {
+exports.contactPage = (req, res, next) => {
     res.render('user/contact', {
         pageTitle: 'ارتباط با مرکز',
         path: '/contact'
     });
 };
 
-exports.principlesPage = (req, res, next) => {
+exports.cooperationPage = (req, res, next) => {
     res.render('user/cooperation', {
         pageTitle: 'دعوت به همکاری',
         path: '/cooperation'

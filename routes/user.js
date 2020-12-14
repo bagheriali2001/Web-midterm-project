@@ -14,4 +14,8 @@ router.get('/principles' , userController.principlesPage)
 
 router.get('/home' , userController.homePage)
 
+router.get('/cooperation' , userController.cooperationPage)
+
+router.get('/contact' , userController.contactPage)
+
 module.exports = router;

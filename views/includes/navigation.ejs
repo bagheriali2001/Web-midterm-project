@@ -16,7 +16,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto mx-auto">
                             <li class="nav-item <%= path === '/home' ? 'active' : ''%>">
-                                <a class="nav-link" href="../user/home.ejs">صفحه اصلی</a>
+                                <a class="nav-link" href="/home">صفحه اصلی</a>
                             </li>
                             <li class="nav-item <%= path === '/' ? 'active' : ''%>">
                                 <a class="nav-link" href="#">راهنمای کاربران</a>
@@ -29,18 +29,18 @@
                                     معرفی و قوانین
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item <%= path === '/introduction' ? 'active' : ''%>" href="../user/introduction.ejs">معرفی مرکز و اهداف</a>
-                                    <a class="dropdown-item <%= path === '/staff' ? 'active' : ''%>" href="../user/staff.ejs">معرفی افراد و پرسنل</a>
-                                    <a class="dropdown-item <%= path === '/principals' ? 'active' : ''%>" href="../user/principals.ejs">روسای مرکز</a>
+                                    <a class="dropdown-item <%= path === '/introduction' ? 'active' : ''%>" href="/introduction">معرفی مرکز و اهداف</a>
+                                    <a class="dropdown-item <%= path === '/staff' ? 'active' : ''%>" href="/staff">معرفی افراد و پرسنل</a>
+                                    <a class="dropdown-item <%= path === '/principals' ? 'active' : ''%>" href="/principals">روسای مرکز</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item <%= path === '/principles' ? 'active' : ''%>" href="../user/principles.ejs">قوانین و آیین نماه ها</a>
+                                    <a class="dropdown-item <%= path === '/principles' ? 'active' : ''%>" href="/principles">قوانین و آیین نماه ها</a>
                                 </div>
                             </li>
                             <li class="nav-item <%= path === '/contact' ? 'active' : ''%>">
-                                <a class="nav-link" href="../user/contact.ejs">ارتباط با مرکز</a>
+                                <a class="nav-link" href="/contact">ارتباط با مرکز</a>
                             </li>
                             <li class="nav-item <%= path === '/cooperation' ? 'active' : ''%>">
-                                <a class="nav-link" href="../user/cooperation.ejs">دعوت به همکاری</a>
+                                <a class="nav-link" href="/cooperation">دعوت به همکاری</a>
                             </li>
                         </ul>
                     </div>
