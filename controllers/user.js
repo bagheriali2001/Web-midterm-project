@@ -1,6 +1,6 @@
 const News = require('../models/news')
-
-
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 exports.introductionPage = (req, res, next) => {
     res.render('user/introduction', {
         pageTitle: 'معرفی مرکز و اهداف',
