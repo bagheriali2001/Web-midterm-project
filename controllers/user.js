@@ -1,4 +1,7 @@
 const News = require('../models/news')
+const Cooperation = require('../models/cooperation')
+const Contact = require('../models/contact')
+
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 exports.introductionPage = (req, res, next) => {
@@ -37,6 +40,24 @@ exports.contactPage = (req, res, next) => {
     });
 };
 
+exports.addContactPost = (req, res, next) => {
+    const name = req.body.name
+    const subject = req.body.subject
+    const email = req.body.email
+    const text = req.body.text
+    Contact.create({
+        name : name,
+        subject : subject,
+        email : email,
+        text : text
+    }).then(result => {
+        console.log("Added!")
+        res.redirect('/contact')
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
 exports.cooperationPage = (req, res, next) => {
     res.render('user/cooperation', {
         pageTitle: 'دعوت به همکاری',
@@ -44,21 +65,37 @@ exports.cooperationPage = (req, res, next) => {
     });
 };
 
-exports.homePage = (req, res, next) => {
-    News.max('id').then(max =>{
-        News.findAll( {where:{id: {[Op.gt]: max-4}}})
-        .then(news => {
-            res.render('user/home', {
-                news : news,
-                pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
-                path: '/home'
-            });
-        }).catch(err => {
-            console.log(err)
-        })
+exports.addCooperationPost = (req, res, next) => {
+    const name = req.body.name
+    const email = req.body.email
+    const phoneNumber = req.body.phoneNumber
+    const interest = req.body.interest
+    const description = req.body.description
+    Cooperation.create({
+        name : name,
+        email : email,
+        phoneNumber : phoneNumber,
+        interest : interest,
+        description : description
+    }).then(result => {
+        console.log("Added!")
+        res.redirect('/cooperation')
+    }).catch(err => {
+        console.log(err)
     })
-    
-    
+}
+
+exports.homePage = (req, res, next) => {
+    News.findAll( { order: [['id', 'DESC']], limit: 4 })
+    .then(news => {
+        res.render('user/home', {
+            news : news,
+            pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
+            path: '/home'
+        });
+    }).catch(err => {
+        console.log(err)
+    })
 };
 
 exports.getOneNews = (req, res, next) =>{
