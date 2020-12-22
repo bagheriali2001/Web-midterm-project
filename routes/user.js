@@ -24,4 +24,8 @@ router.post('/contact/add' , userController.addContactPost)
 
 router.get('/news/:newsId' , userController.getOneNews)
 
+router.get('/guide' , userController.guidePage)
+
+router.get('/services' , userController.servicesPage)
+
 module.exports = router;
