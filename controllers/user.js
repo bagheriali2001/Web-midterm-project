@@ -111,3 +111,18 @@ exports.getOneNews = (req, res, next) =>{
             console.log(err)
         })
 } 
+
+
+exports.guidePage = (req, res, next) => {
+    res.render('user/guide', {
+        pageTitle: 'راهنمای کاربران',
+        path: '/guide'
+    });
+};
+
+exports.servicesPage = (req, res, next) => {
+    res.render('user/services', {
+        pageTitle: 'خدمات فناوری اطلاعات دانشگاه',
+        path: '/services'
+    });
+};
