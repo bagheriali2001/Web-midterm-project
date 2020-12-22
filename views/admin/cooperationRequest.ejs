@@ -1,27 +1,34 @@
 <%- include('../includes/head.ejs') %>
 
+    <link rel="stylesheet" href="css/readMoreText.css">
+
     </head>
 
     <body>
         <%- include('../includes/adminNavigation.ejs') %>
         <main class="float-left w-100">
-            <section class="news float-left w-100 py-4">
-                <div class="container">
-                    <div class="news-content float-left w-100">
-                        <% for(var i = 0; i < cooperations.length; i++) { %>                        <div class="news-card col-12 col-md-6 col-lg-3 card float-left px-2 border-0 py-3 bg-light" style="height: 450px;">
-                            <div class="card-body">
-                                <p class="card-text">نام و نام خانوادگی: </p>
-                                <p class="card-text"><%= cooperations[i].name %></p>
-                                <p class="card-text">ایمیل:</p>
-                                <p class="card-text"><%= cooperations[i].email %></p>
-                                <p class="card-text">شماره تماس:</p>
-                                <p class="card-text"><%= cooperations[i].phoneNumber %></p>
-                                <p class="card-text">زمینه علاقه:</p>
-                                <p class="card-text"><%= cooperations[i].interest %></p>
-                                <p class="card-text">توضیحات:</p>
-                                <p class="card-text"><%= cooperations[i].description %></p>
+            <section class="contact float-left w-100 py-4">
+                <div class="container d-flex justify-content-center bg-dark text-light">
+                    <h2 class="py-4">درخواست های همکاری</h2>
+                </div>
+                <div class="container d-flex justify-content-center">
+                    <div class="contact-content float-left w-100 col-12 col-md-6">
+                        <% for(var i = 0; i < cooperations.length; i++) { %>  
+                            <div class="contact-card col-12 card float-left px-2 border-0 py-3 bg-light height-auto">
+                                <div class="card-body">
+                                    <p class="card-text">نام و نام خانوادگی: </p>
+                                    <p class="card-text"><%= cooperations[i].name %></p>
+                                    <p class="card-text">ایمیل:</p>
+                                    <p class="card-text"><%= cooperations[i].email %></p>
+                                    <p class="card-text">شماره تماس:</p>
+                                    <p class="card-text"><%= cooperations[i].phoneNumber %></p>
+                                    <p class="card-text">زمینه علاقه:</p>
+                                    <p class="card-text"><%= cooperations[i].interest %></p>
+                                    <p class="card-text">توضیحات :</p>
+                                    <p class="text-read-more card-text"><%= cooperations[i].description %></p>
+                                    <button class="btn btn-info read-more-btn"><i class="fa fa-chevron-down"></i></button>
+                                </div>
                             </div>
-                        </div>
                         <% } %>
                     </div>
                 </div>  
