@@ -1,7 +1,6 @@
 
 <%- include('../includes/head.ejs') %>
 
-    <link rel="stylesheet" href="css/addnews.css">
     </head>
 
     <body>
@@ -15,7 +14,7 @@
             
             <section class="float-left w-100 py-4">
                 <div class="container">
-                    <form class="news-form mx-auto" action="/addnews/add" method="POST">
+                    <form class="news-form mx-auto" style="max-width: 450px;font-weight: 500;" action="/addguideandservice" method="POST">
                         <div class="form-group">
                             <label for="title">عنوان خبر:</label>
                             <input type="text" class="form-control" name="title" id="title" maxlength="30">
