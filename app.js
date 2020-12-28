@@ -31,8 +31,8 @@ app.use(errorController.get404);
 Guide.belongsToMany(Service , {through : GuideService})
 Service.belongsToMany(Guide , {through : GuideService})
 
-sequelize.sync({force:true})
-// sequelize.sync()
+// sequelize.sync({force:true})
+sequelize.sync()
     .then(result => {
         // console.log(result)
         app.listen(3000)
