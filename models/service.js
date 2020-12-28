@@ -2,14 +2,18 @@ const Sequelize = require('sequelize')
 
 const sequelize = require('../util/database')
 
-const News = sequelize.define('news', {
+const Service = sequelize.define('service', {
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    title:{
+    name:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    url:{
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -21,18 +25,22 @@ const News = sequelize.define('news', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    date:{
-        type: Sequelize.STRING,
+    isPublic:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     },
-    author:{
-        type: Sequelize.STRING,
+    isForStaff:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     },
-    text:{
-        type: Sequelize.STRING,
+    isForTeachers:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+    },
+    isForStudents:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     }
 });
 
-module.exports = News
+module.exports = Service

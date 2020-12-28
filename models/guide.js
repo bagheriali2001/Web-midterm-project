@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 
 const sequelize = require('../util/database')
 
-const News = sequelize.define('news', {
+const Guide = sequelize.define('guide', {
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -13,26 +13,30 @@ const News = sequelize.define('news', {
         type: Sequelize.STRING,
         allowNull: false
     },
+    url:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     description:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    img:{
-        type: Sequelize.STRING,
+    isPublic:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     },
-    date:{
-        type: Sequelize.STRING,
+    isForStaff:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     },
-    author:{
-        type: Sequelize.STRING,
+    isForTeachers:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     },
-    text:{
-        type: Sequelize.STRING,
+    isForStudents:{
+        type: Sequelize.BOOLEAN,
         allowNull: false
     }
 });
 
-module.exports = News
+module.exports = Guide

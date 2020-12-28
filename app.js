@@ -9,6 +9,10 @@ const errorController = require('./controllers/error');
 const userRoutes = require('./routes/user');
 const adminRoutes = require('./routes/admin');
 
+const Guide = require('./models/guide')
+const Service = require('./models/service')
+const GuideService = require('./models/guide-service')
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -23,6 +27,9 @@ app.use(userRoutes);
 app.use(adminRoutes);
 
 app.use(errorController.get404);
+
+Guide.belongsToMany(Service , {through : GuideService})
+Service.belongsToMany(Guide , {through : GuideService})
 
 // sequelize.sync({force:true})
 sequelize.sync()

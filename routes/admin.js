@@ -12,5 +12,16 @@ router.get('/contactRequest' , adminController.contactRequest)
 
 router.get('/cooperationRequest' , adminController.cooperationRequest)
 
+router.get('/services' , adminController.services)
+
+router.get('/addservice' , adminController.addserviceGet)
+
+router.post('/addservice/add' , adminController.addservicePost)
+
+router.get('/guides' , adminController.guides)
+
+router.get('/addguide' , adminController.addguideGet)
+
+router.post('/addguide/add' , adminController.addguidePost)
 
 module.exports = router;
