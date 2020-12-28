@@ -89,6 +89,7 @@ exports.addservicePost = (req, res, next) => {
     const isForStaff = true
     const isForTeachers = true
     const isForStudents = true
+    const isForGraduated = true
     Service.create({
         name : name,
         description : description,
@@ -134,6 +135,7 @@ exports.addguidePost = (req, res, next) => {
     const isForStaff = true
     const isForTeachers = true
     const isForStudents = true
+    const isForGraduated = true
     Guide.create({
         title : title,
         description : description,
