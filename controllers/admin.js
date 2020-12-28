@@ -98,7 +98,8 @@ exports.addservicePost = (req, res, next) => {
         isPublic : isPublic,
         isForStaff : isForStaff,
         isForTeachers : isForTeachers,
-        isForStudents : isForStudents
+        isForStudents : isForStudents,
+        isForGraduated : isForGraduated
     }).then(result => {
         console.log("Added!")
         res.redirect('/addservice')

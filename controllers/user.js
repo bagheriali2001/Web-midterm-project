@@ -1,6 +1,8 @@
 const News = require('../models/news')
 const Cooperation = require('../models/cooperation')
 const Contact = require('../models/contact')
+const Service = require('../models/service')
+const Guide = require('../models/guide')
 
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
@@ -121,8 +123,15 @@ exports.guidePage = (req, res, next) => {
 };
 
 exports.servicesPage = (req, res, next) => {
-    res.render('user/services', {
-        pageTitle: 'خدمات فناوری اطلاعات دانشگاه',
-        path: '/services'
-    });
+    Service.findAll()
+        .then(services => {
+            console.log(services)
+            res.render('user/services', {
+                services : services,
+                pageTitle: 'خدمات فناوری اطلاعات دانشگاه',
+                path: '/services'
+            });
+        }).catch(err => {
+            console.log(err)
+        })
 };
