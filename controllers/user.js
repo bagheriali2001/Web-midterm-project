@@ -5,6 +5,7 @@ const Service = require('../models/service')
 const Guide = require('../models/guide')
 
 const Sequelize = require('sequelize')
+const { guides } = require('./admin')
 const Op = Sequelize.Op
 exports.introductionPage = (req, res, next) => {
     res.render('user/introduction', {
@@ -116,16 +117,21 @@ exports.getOneNews = (req, res, next) =>{
 
 
 exports.guidePage = (req, res, next) => {
-    res.render('user/guide', {
-        pageTitle: 'راهنمای کاربران',
-        path: '/guide'
-    });
+    Guide.findAll()
+    .then(guides => {
+        res.render('user/guide', {
+            guides : guides,
+            pageTitle: 'راهنمای کاربران',
+            path: '/guide'
+        });
+    }).catch(err => {
+        console.log(err)
+    })
 };
 
 exports.servicesPage = (req, res, next) => {
     Service.findAll()
         .then(services => {
-            console.log(services)
             res.render('user/services', {
                 services : services,
                 pageTitle: 'خدمات فناوری اطلاعات دانشگاه',
