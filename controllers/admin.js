@@ -151,3 +151,42 @@ exports.addguidePost = (req, res, next) => {
         console.log(err)
     })
 };
+
+exports.addguideandserviceGet = (req, res, next) => {
+    var services
+    var guides
+    Service.findAll({}).then(services => {
+        services = services
+        Guide.findAll({}).then(guides => {
+            guides = guides
+        })
+    }).then( result =>{
+        res.render('admin/addguideandservice', {
+            services : services,
+            guides : guides,
+            pageTitle: 'اتصال راهنما ها و خدمات',
+            path: '/addguideandservice'
+        });
+    }).catch(err => {
+        console.log(err)
+    })
+};
+
+exports.addguideandservicePost = (req, res, next) => {
+    const serviceId = req.body.serviceId
+    const guideId = req.body.guideId
+    var guide
+    var service
+    Service.findById({where : {id: serviceId}})
+    .then(service =>{
+        service = service
+        Guide.findById({where : {id: guideId}})
+        .then(guide =>{
+            guide = guide
+        })
+    }).then(result => {
+        service.addGuide(guide)
+    }).catch(err => {
+        console.log(err)
+    })
+};

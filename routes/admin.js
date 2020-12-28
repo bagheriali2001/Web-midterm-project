@@ -24,4 +24,8 @@ router.get('/addguide' , adminController.addguideGet)
 
 router.post('/addguide/add' , adminController.addguidePost)
 
+router.get('/addguideandservice' , adminController.addguideandserviceGet)
+
+router.post('/addguideandservice/add' , adminController.addguideandservicePost)
+
 module.exports = router;
