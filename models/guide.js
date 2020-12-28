@@ -36,6 +36,10 @@ const Guide = sequelize.define('guide', {
     isForStudents:{
         type: Sequelize.BOOLEAN,
         allowNull: false
+    },
+    isForGraduated:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false
     }
 });
 

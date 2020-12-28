@@ -40,6 +40,10 @@ const Service = sequelize.define('service', {
     isForStudents:{
         type: Sequelize.BOOLEAN,
         allowNull: false
+    },
+    isForGraduated:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false
     }
 });
 
