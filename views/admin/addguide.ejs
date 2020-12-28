@@ -1,6 +1,5 @@
 <%- include('../includes/head.ejs') %>
 
-    <link rel="stylesheet" href="css/addguide.css">
     </head>
 
     <body>
@@ -14,7 +13,7 @@
             
             <section class="float-left w-100 py-4">
                 <div class="container">
-                    <form class="guide-form mx-auto" action="/addguide/add" method="POST">
+                    <form class="guide-form mx-auto" style="max-width: 450px;font-weight: 500;" action="/addguide/add" method="POST">
                         <div class="form-group">
                             <label for="title">عنوان راهنما:</label>
                             <input type="text" class="form-control" name="title" id="title">
@@ -31,17 +30,40 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="section">بخش مورد نظر:</label>
-                            <select class="form-control" name="section" id="section">
-                              <option>اساتید</option>
-                              <option>دانشجويان</option>
-                              <option>کارکنان</option>
-                              <option>دانش آموختگان</option>
-                              <option>عمومی</option>
-                            </select>
+                            <div class="form-group">
+                                <label>بخش مورد نظر:</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="isForTeachers" value="">اساتید
+                                </label>
+                            </div>
+    
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="isForStudents" value="">دانشجويان
+                                </label>
+                            </div> 
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="isForStaff" value="">کارکنان
+                                </label>
+                            </div>
+    
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="isForGraduated" value="">دانش آموختگان
+                                </label>
+                            </div> 
+    
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="isPublic" value="">عمومی
+                                </label>
+                            </div> 
                         </div>
 
-                        <button type="submit" class="btn btn-primary">تایید</button>
+                        <button type="submit" class="btn btn-primary">ارسال</button>
                       </form>
                 </div>
             </section>

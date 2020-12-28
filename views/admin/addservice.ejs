@@ -6,31 +6,70 @@
 <body>
     <%- include('../includes/adminNavigation.ejs') %>
 
-                <form class="news-form mx-auto" action="/addservice/add" method="POST">
-                    <label for="title">نام خدمت:</label>
-                    <input type="text" class="form-control" name="name" id="name" maxlength="30">
+    <main class="float-left w-100">
+        <section class="float-left w-100 py-4 bg-light">
+            <div class="container d-flex justify-content-center">
+                <h2>ایجاد خدمت جدید</h2>
+            </div>
+        </section>
+        
+        <section class="float-left w-100 py-4">
+            <div class="container">
+                <form class="service-form mx-auto" style="max-width: 450px;font-weight: 500;" action="/addservice/add" method="POST">
+                    <div class="form-group">
+                        <label for="name">نام خدمت:</label>
+                        <input type="text" class="form-control" name="name" id="name" maxlength="30">
+                      </div>
 
-                    <label for="description">توضیحات:</label>
-                    <input type="text" class="form-control"  name="description" id="description" maxlength="70">
+                    <div class="form-group">
+                        <label for="description">توضیحات:</label>
+                        <input type="text" class="form-control"  name="description" id="description" maxlength="70">    
+                    </div>
 
-                    
-                    <label for="author">آدرس تصویر:</label>
-                    <input type="text" class="form-control" name="img" id="img">
-                    
-                    <label for="date">آدرس سایت:</label>
-                    <input type="text" class="form-control" name="url" id="url">
-                    
-                    <label for="date">عمومی</label>
-                    <input type="text" class="form-control" name="isPublic" id="isPublic">
-                    
-                    <label for="date">کارکنان</label>
-                    <input type="text" class="form-control" name="isForStaff" id="isForStaff">
+                    <div class="form-group">
+                        <label for="img">آدرس تصویر:</label>
+                        <input type="text" class="form-control" name="img" id="img">
+                    </div>
 
-                    <label for="date">اساتید</label>
-                    <input type="text" class="form-control" name="isForTeachers" id="isForTeachers">
+                    <div class="form-group">
+                        <label for="url">آدرس سایت:</label>
+                        <input type="text" class="form-control" name="url" id="url">
+                    </div>
 
-                    <label for="date">دانشجویان</label>
-                    <input type="text" class="form-control" name="isForStudents" id="isForStudents">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>بخش مورد نظر:</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="isForTeachers" value="">اساتید
+                            </label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="isForStudents" value="">دانشجويان
+                            </label>
+                        </div> 
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="isForStaff" value="">کارکنان
+                            </label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="isForGraduated" value="">دانش آموختگان
+                            </label>
+                        </div> 
+
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="isPublic" value="">عمومی
+                            </label>
+                        </div> 
+                    </div>
+                    
 
                     <button type="submit" class="btn btn-primary">ارسال</button>
                   </form>
