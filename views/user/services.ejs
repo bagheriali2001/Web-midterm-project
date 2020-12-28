@@ -14,48 +14,26 @@
                 <div class="col-12 col-md-6 float-right bg-light">
                     <h4 class="py-4">خدمات اساتید</h4>
                     <ul class="list-unstyled p-0">
-                        <li class="py-2">
-                            <img class="card-img-top mx-auto img-service" src="images/news/download-image.jpg" alt="Card image cap">
+                        <% for(var i = 0; i < services.length; i++) { %>
+                            <% if(services.isForTeachers === true) { %>
+                                <li class="py-2">
+                                    <img class="card-img-top mx-auto img-service" src="<%= services[i].img || images/news/download-image.jpg %>" alt="Card image cap">
 
-                            <div class="btn-group dropleft">
-                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  سامانه اساتید دانشگاه نوشیروانی بابل
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="py-2">
-                            <img class="card-img-top mx-auto img-service" src="images/news/download-image.jpg" alt="Card image cap">
-
-                            <div class="btn-group dropleft">
-                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  سامانه اساتید دانشگاه  
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="py-2">
-                            <img class="card-img-top mx-auto img-service" src="images/news/download-image.jpg" alt="Card image cap">
-
-                            <div class="btn-group dropleft">
-                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  سامانه اساتید دانشگاه نوشیروانی بابل
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                        </li>
+                                    <div class="btn-group dropleft">
+                                        <a href="<%= services[i].url %>">
+                                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <%= services[i].name %>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <% for(var j = 0; j < services[i].guides.length; j++) { %>
+                                                <a class="dropdown-item" href="#"><%= services[i].guides[j] %></a>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </li>
+                            <% } %>
+                        <% } %>
                     </ul>
                 </div>
 
