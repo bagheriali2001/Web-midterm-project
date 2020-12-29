@@ -19,14 +19,18 @@
                     <div class="form-group">
                         <label for="title">عنوان راهنما:</label>
                         <select class="form-control" name="section" id="section">
-                            <option value="">اساتید</option>
+                            <% for(var i = 0; i < guides.length; i++) { %>
+                                <option value="<%= guides[i].id %>"><%= guides[i].title %></option>
+                            <% } %>
                         </select>
                     </div>   
     
                     <div class="form-group">
                         <label for="title">عنوان خدمت:</label>
                         <select class="form-control" name="section" id="section">
-                            <option value="">اساتید</option>
+                            <% for(var i = 0; i < services.length; i++) { %>
+                                <option value="<%= services[i].id %>"><%= services[i].name %></option>
+                            <% } %>
                         </select>
                     </div>                
     
