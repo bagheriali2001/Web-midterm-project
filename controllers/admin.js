@@ -105,11 +105,22 @@ exports.addservicePost = (req, res, next) => {
     const description = req.body.description
     const img = req.body.img
     const url = req.body.url
-    const isPublic = true
-    const isForStaff = true
-    const isForTeachers = true
-    const isForStudents = true
-    const isForGraduated = true
+    const isPublic = Boolean(req.body.isPublic)
+    const isForStaff = Boolean(req.body.isForStaff)
+    const isForTeachers = Boolean(req.body.isForTeachers)
+    const isForStudents = Boolean(req.body.isForStudents)
+    const isForGraduated = Boolean(req.body.isForGraduated)
+
+    console.log(name);
+    console.log(description);
+    console.log(img);
+    console.log(url);
+    console.log(isPublic);
+    console.log(isForStaff);
+    console.log(isForTeachers);
+    console.log(isForStudents);
+    console.log(isForGraduated);
+
     Service.create({
         name : name,
         description : description,
@@ -152,11 +163,22 @@ exports.addguidePost = (req, res, next) => {
     const title = req.body.title
     const description = req.body.description
     const url = req.body.url
-    const isPublic = true
-    const isForStaff = true
-    const isForTeachers = true
-    const isForStudents = true
-    const isForGraduated = true
+    
+    const isPublic = Boolean(req.body.isPublic)
+    const isForStaff = Boolean(req.body.isForStaff)
+    const isForTeachers = Boolean(req.body.isForTeachers)
+    const isForStudents = Boolean(req.body.isForStudents)
+    const isForGraduated = Boolean(req.body.isForGraduated)
+
+    console.log(title);
+    console.log(description);
+    console.log(url);
+    console.log(isPublic);
+    console.log(isForStaff);
+    console.log(isForTeachers);
+    console.log(isForStudents);
+    console.log(isForGraduated);
+
     Guide.create({
         title : title,
         description : description,
