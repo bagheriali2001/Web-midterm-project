@@ -3,6 +3,7 @@ const Cooperation = require('../models/cooperation')
 const Contact = require('../models/contact')
 const Service = require('../models/service')
 const Guide = require('../models/guide')
+const formidable = require('formidable');
 
 
 exports.addnewsGet = (req, res, next) => {
@@ -81,6 +82,25 @@ exports.addserviceGet = (req, res, next) => {
 };
 
 exports.addservicePost = (req, res, next) => {
+ 
+    form.parse(req, (err, fields, files) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        console.log(fields)
+        console.log(files)
+        // res.json({ fields, files });
+    });
+    // const {
+    //     isFor
+    // } = req.body
+    // isFor.forEach(temp => console.log(temp))
+    console.log("req.body.isPublic = " + req.body.isPublic)
+    console.log("req.body.isForStaff = " + req.body.isForStaff)
+    console.log("req.body.isForTeachers = " + req.body.isForTeachers)
+    console.log("req.body.isForStudents = " + req.body.isForStudents)
+    console.log("req.body.isForGraduated = " + req.body.isForGraduated)
     const name = req.body.name
     const description = req.body.description
     const img = req.body.img
