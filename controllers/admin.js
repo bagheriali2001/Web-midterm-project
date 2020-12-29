@@ -183,8 +183,6 @@ exports.addguideandservicePost = (req, res, next) => {
     const guideId = req.body.guide
     var choosenGuide
     var choosenService
-    var serviceList
-    var guideList
     Service.findAll({where : {id: serviceId}})
     .then(service =>{
         choosenService = service[0]
