@@ -183,16 +183,16 @@ exports.addguideandservicePost = (req, res, next) => {
     const guideId = req.body.guide
     var choosenGuide
     var choosenService
-
     Service.findAll({where : {id: serviceId}})
     .then(service =>{
-        choosenService = service
+        choosenService = service[0]
         return Guide.findAll({where : {id: guideId}})
-        
     }).then(guide =>{
-        choosenGuide = guide
+        choosenGuide = guide[0]
     }).then(result => {
         choosenService.addGuide(choosenGuide)
+        console.log("Added!")
+        res.redirect('/addguideandservice')
     }).catch(err => {
         console.log(err)
     })

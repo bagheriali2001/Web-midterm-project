@@ -28,8 +28,8 @@ app.use(adminRoutes);
 
 app.use(errorController.get404);
 
-Guide.belongsToMany(Service , {through : GuideService})
 Service.belongsToMany(Guide , {through : GuideService})
+Guide.belongsToMany(Service , {through : GuideService})
 
 // sequelize.sync({force:true})
 sequelize.sync()
