@@ -5,8 +5,26 @@ const Service = require('../models/service')
 const Guide = require('../models/guide')
 
 const Sequelize = require('sequelize')
+const fs = require('fs')
 const { guides } = require('./admin')
 const Op = Sequelize.Op
+
+var analytics = {
+    "online" :12,
+    "today" : 25,
+    "last_week" : 270 ,
+    "last_month" : 1135,
+    "total" : 5130
+}
+var serviceStatus = {
+    "golestan" : true,
+    "main_website" : true,
+    "lms" : false,
+    "food" : true
+}
+
+
+
 exports.introductionPage = (req, res, next) => {
     res.render('user/introduction', {
         pageTitle: 'معرفی مرکز و اهداف',
@@ -92,7 +110,9 @@ exports.homePage = (req, res, next) => {
     News.findAll( { order: [['id', 'DESC']], limit: 4 })
     .then(news => {
         res.render('user/home', {
-            news : news,
+            news: news,
+            analytics: analytics,
+            serviceStatus: serviceStatus,
             pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
             path: '/home'
         });
@@ -114,7 +134,6 @@ exports.getOneNews = (req, res, next) =>{
             console.log(err)
         })
 } 
-
 
 exports.guidePage = (req, res, next) => {
     Guide.findAll()
