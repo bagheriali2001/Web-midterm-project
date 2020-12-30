@@ -18,7 +18,8 @@
                     
                     <div class="form-group">
                         <label for="title">عنوان راهنما:</label>
-                        <select class="form-control" name="guide" id="guide">
+                        <select class="form-control" name="guide" id="guideSlelct">
+                            <option value="" id="model1" selected>انتخاب کنید</option>
                             <% for(var i = 0; i < guides.length; i++) { %>
                                 <option value="<%= guides[i].id %>"><%= guides[i].title %></option>
                             <% } %>
@@ -27,14 +28,15 @@
     
                     <div class="form-group">
                         <label for="title">عنوان خدمت:</label>
-                        <select class="form-control" name="service" id="service">
+                        <select class="form-control" name="service" id="serviceSelect">
+                            <option value="" id="model2" selected>انتخاب کنید</option>
                             <% for(var i = 0; i < services.length; i++) { %>
                                 <option value="<%= services[i].id %>"><%= services[i].name %></option>
                             <% } %>
                         </select>
                     </div>                
     
-                    <button type="submit" class="btn btn-primary">ارسال</button>
+                    <button type="submit" class="btn btn-primary" id="submitDisable" disabled>ارسال</button>
                 </form>
             </div>
         </section>

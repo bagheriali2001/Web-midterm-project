@@ -23,6 +23,38 @@ $(function() {
             readMoreBtn.html('<i class="fa fa-chevron-down"></i>');
         }
     });
-   
+
+
+    let submitBtn = $('#submitDisable');
+    let flag1 = false;
+    let flag2 = false;
+    $("#guideSlelct").change(function() {
+        let id = $(this).children(":selected").attr("id");
+        if(id === "model1") {
+            flag1 = false;
+        } else {
+            flag1 = true;
+        }
+        if(flag1 === true && flag2 === true) {
+            submitBtn.prop("disabled", false);
+        } else {
+            submitBtn.prop("disabled", true);
+        }
+    });
+
+    $("#serviceSelect").change(function() {
+        let id = $(this).children(":selected").attr("id");
+        if(id === "model2") {
+            flag2 = false;
+        } else {
+            flag2 = true;
+        }
+        if(flag1 === true && flag2 === true) {
+            submitBtn.prop("disabled", false);
+        } else {
+            submitBtn.prop("disabled", true);
+        }
+    });
+
 
 });
