@@ -3,6 +3,7 @@ const Cooperation = require('../models/cooperation')
 const Contact = require('../models/contact')
 const Service = require('../models/service')
 const Guide = require('../models/guide')
+const Admin = require('../models/admin')
 
 
 exports.addnewsGet = (req, res, next) => {

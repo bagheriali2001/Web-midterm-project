@@ -8,6 +8,7 @@ const sequelize = require('./util/database')
 const errorController = require('./controllers/error');
 const userRoutes = require('./routes/user');
 const adminRoutes = require('./routes/admin');
+const authRoutes = require('./routes/auth');
 
 const Guide = require('./models/guide')
 const Service = require('./models/service')
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/admin', adminRoutes);
 app.use(userRoutes);
 app.use(adminRoutes);
+app.use(authRoutes);
 
 app.use(errorController.get404);
 
