@@ -33,7 +33,14 @@
                             <li class="nav-item <%= path === '/cooperationRequest' ? 'active' : ''%>">
                                 <a class="nav-link" href="/cooperationRequest">درخواست های همکاری</a>
                             </li>
-                            
+                            <% if (isSuperAdmin) { %>
+                            <li class="nav-item <%= path === '/addadmin' ? 'active' : ''%>">
+                                <a class="nav-link" href="/addadmin">ایجاد مدیر جدید</a>
+                            </li>
+                            <% } %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">خروج</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

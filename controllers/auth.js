@@ -48,9 +48,10 @@ exports.addAdminPost = (req, res, next) => {
     var username = req.body.username
     var password = req.body.password
     var name = req.body.name
-    Admin.Create({name: name, 
+    Admin.create({name: name, 
         username: username, 
-        password: password
+        password: password,
+        isSuperAdmin: false
     }).then(result => {
         console.log("Added!")
         res.redirect('/addadmin')

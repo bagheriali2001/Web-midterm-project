@@ -1,4 +1,30 @@
-<%- include('../includes/head.ejs') %>
+<% if (!isAuthenticated) { %>
+    <!DOCTYPE html>
+    <html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>اخطار</title>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrapCSS/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+        </head>
+    
+        <body>  
+            <h3>لطفا ابتدا وارد شوید.</h3>
+            <a href="/login">ورود</a>
+        </body>
+    </html>
+    
+    <% } %>
+    <% if (isAuthenticated) { %>
+    <%- include('../includes/head.ejs') %>
 
     </head>
 
@@ -72,4 +98,5 @@
         <%- include('../includes/footer.ejs') %>
 
 <%- include('../includes/end.ejs') %>
+<% } %>
             
