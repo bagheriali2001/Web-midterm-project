@@ -8,7 +8,18 @@ exports.loginGet = (req, res, next) => {
 };
 
 exports.loginPost = (req, res, next) => {
-    
+    const adminUsername = req.body.username
+    const adminPassword = req.body.password
+    Admin.findAll({where : {username: adminUsername, password: adminPassword}})
+    .then(admin =>{
+        if(admin.length < 1){
+            res.redirect('/login')
+        }
+        else{
+            req.session.isLoggedIn = true
+            req.session.isSuperAdmin = admin[0].isSuperAdmin
+        }
+    })
 };
 
 exports.addadminGet = (req, res, next) => {
