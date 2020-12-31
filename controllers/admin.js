@@ -8,8 +8,8 @@ const Admin = require('../models/admin')
 
 exports.addnewsGet = (req, res, next) => {
     res.render('admin/addnews', {
-        isAuthenticated : req.session.isLoggedIn,
-        isSuperAdmin : req.session.isSuperAdmin,
+        isAuthenticated: req.session.isLoggedIn,
+        isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن خبر',
         path: '/addnews'
     });
@@ -41,8 +41,8 @@ exports.contactRequest = (req, res, next) => {
     Contact.findAll( { order: [['id', 'DESC']]})
     .then(contacts => {
         res.render('admin/contactRequest', {
-            isAuthenticated : req.session.isLoggedIn,
-            isSuperAdmin : req.session.isSuperAdmin,
+            isAuthenticated: req.session.isLoggedIn,
+            isSuperAdmin: req.session.isSuperAdmin,
             contacts : contacts,
             pageTitle: 'درخواست های تماس',
             path: '/contactRequest'
@@ -56,8 +56,8 @@ exports.cooperationRequest = (req, res, next) => {
     Cooperation.findAll( { order: [['id', 'DESC']]})
     .then(cooperations => {
         res.render('admin/cooperationRequest', {
-            isAuthenticated : req.session.isLoggedIn,
-            isSuperAdmin : req.session.isSuperAdmin,
+            isAuthenticated: req.session.isLoggedIn,
+            isSuperAdmin: req.session.isSuperAdmin,
             cooperations : cooperations,
             pageTitle: 'درخواست های همکاری',
             path: '/cooperationRequest'
@@ -71,8 +71,8 @@ exports.services = (req, res, next) => {
     Service.findAll( { order: [['id', 'DESC']]})
     .then(services => {
         res.render('admin/services', {
-            isAuthenticated : req.session.isLoggedIn,
-            isSuperAdmin : req.session.isSuperAdmin,
+            isAuthenticated: req.session.isLoggedIn,
+            isSuperAdmin: req.session.isSuperAdmin,
             services : services,
             pageTitle: 'لیست خدمات',
             path: '/services'
@@ -84,8 +84,8 @@ exports.services = (req, res, next) => {
 
 exports.addserviceGet = (req, res, next) => {
     res.render('admin/addservice', {
-        isAuthenticated : req.session.isLoggedIn,
-        isSuperAdmin : req.session.isSuperAdmin,
+        isAuthenticated: req.session.isLoggedIn,
+        isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن خدمات',
         path: '/addservice'
     });
@@ -125,8 +125,8 @@ exports.guides = (req, res, next) => {
     Guide.findAll( { order: [['id', 'DESC']]})
     .then(guides => {
         res.render('admin/guides', {
-            isAuthenticated : req.session.isLoggedIn,
-            isSuperAdmin : req.session.isSuperAdmin,
+            isAuthenticated: req.session.isLoggedIn,
+            isSuperAdmin: req.session.isSuperAdmin,
             guides : guides,
             pageTitle: 'لیست راهنما ها',
             path: '/guides'
@@ -138,8 +138,8 @@ exports.guides = (req, res, next) => {
 
 exports.addguideGet = (req, res, next) => {
     res.render('admin/addguide', {
-        isAuthenticated : req.session.isLoggedIn,
-        isSuperAdmin : req.session.isSuperAdmin,
+        isAuthenticated: req.session.isLoggedIn,
+        isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن راهنما',
         path: '/addguide'
     });
@@ -183,8 +183,8 @@ exports.addguideandserviceGet = (req, res, next) => {
         guideList = guides
     }).then(result => {
         res.render('admin/addguideandservice', {
-            isAuthenticated : req.session.isLoggedIn,
-            isSuperAdmin : req.session.isSuperAdmin,
+            isAuthenticated: req.session.isLoggedIn,
+            isSuperAdmin: req.session.isSuperAdmin,
             services : serviceList,
             guides : guideList,
             pageTitle: 'اتصال راهنما ها و خدمات',

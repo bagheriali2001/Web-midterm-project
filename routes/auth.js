@@ -10,12 +10,12 @@ router.post('/login' , authController.loginPost)
 
 router.post('/logout' , authController.logoutPost)
 
-router.get('/addadmin' , authController.addadminGet)
+router.get('/addadmin' , authController.addAdminGet)
 
-router.post('/addadmin' , authController.addadminPost)
+router.post('/addadmin' , authController.addAdminPost)
 
-router.get('/changepassword' , authController.changepasswordGet)
+router.get('/changepassword' , authController.changePasswordGet)
 
-router.post('/changepassword' , authController.changepasswordPost)
+router.post('/changepassword' , authController.changePasswordPost)
 
 module.exports = router;

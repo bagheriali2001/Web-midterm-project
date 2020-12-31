@@ -19,7 +19,7 @@
   "homepage": "https://github.com/bagheriali2001/Web-midterm-project#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "connect-pg-simple": "^6.2.1",
+    "connect-session-sequelize": "^7.0.4",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
