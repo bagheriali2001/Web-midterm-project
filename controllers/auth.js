@@ -26,12 +26,10 @@ exports.loginPost = (req, res, next) => {
     })
 };
 
-exports.logoutPost = (req, res, next) => {
-    req.session.destroy(
-    ).then(result =>{
-        res.redirect('/home')
-    }).catch(err => {
+exports.logoutGet = (req, res, next) => {
+    req.session.destroy( err =>{
         console.log(err)
+        res.redirect('/home')
     })
 };
 

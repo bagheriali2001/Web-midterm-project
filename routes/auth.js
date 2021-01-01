@@ -8,7 +8,7 @@ router.get('/login' , authController.loginGet)
 
 router.post('/login' , authController.loginPost)
 
-router.post('/logout' , authController.logoutPost)
+router.get('/logout' , authController.logoutGet)
 
 router.get('/addadmin' , authController.addAdminGet)
 
