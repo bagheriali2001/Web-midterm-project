@@ -28,4 +28,5 @@ router.get('/guide' , userController.guidePage)
 
 router.get('/services' , userController.servicesPage)
 
+router.get('/', (req, res) => {res.redirect('/home');})
 module.exports = router;

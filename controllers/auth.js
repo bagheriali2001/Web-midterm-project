@@ -19,6 +19,7 @@ exports.loginPost = (req, res, next) => {
             req.session.isLoggedIn = true
             req.session.isSuperAdmin = admin[0].isSuperAdmin
             req.session.username = admin[0].username
+            req.session.name = admin[0].name
             res.redirect('/addnews')
         }
     }).catch(err => {

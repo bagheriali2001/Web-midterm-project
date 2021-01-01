@@ -20,7 +20,7 @@ exports.addnewsPost = (req, res, next) => {
     const description = req.body.description
     const text = req.body.text
     const img = req.body.img
-    const author = req.body.author
+    const author = req.session.name
     const date = req.body.date
     News.create({
         title : title,
