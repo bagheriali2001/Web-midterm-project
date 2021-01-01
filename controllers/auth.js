@@ -1,10 +1,15 @@
 const Admin = require('../models/admin')
 
 exports.loginGet = (req, res, next) => {
-    res.render('auth/login', {
-        pageTitle: 'ورود',
-        path: '/login'
-    });
+    if(req.session.isLoggedIn){
+        res.redirect('/addnews')
+    }
+    else{
+        res.render('auth/login', {
+            pageTitle: 'ورود',
+            path: '/login'
+        });
+    }
 };
 
 exports.loginPost = (req, res, next) => {

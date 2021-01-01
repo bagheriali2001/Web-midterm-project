@@ -26,9 +26,9 @@
         </body>
     </html>
     
-    <% } %>
+<% } %>
 
-<% if (!isSuperAdmin) { %>
+<% if (!isSuperAdmin && isAuthenticated) { %>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
