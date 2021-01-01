@@ -16,11 +16,11 @@ router.get('/home' , userController.homePage)
 
 router.get('/cooperation' , userController.cooperationPage)
 
-router.post('/cooperation/add' , userController.addCooperationPost)
+router.post('/cooperation' , userController.addCooperationPost)
 
 router.get('/contact' , userController.contactPage)
 
-router.post('/contact/add' , userController.addContactPost)
+router.post('/contact' , userController.addContactPost)
 
 router.get('/news/:newsId' , userController.getOneNews)
 
