@@ -98,24 +98,28 @@
                     <div class="system-users col-12 col-md-6 order-md-2 float-right">
                         <h4>آمار کاربران سامانه ها</h4>
                         <ul class="list-unstyled p-0">
-                            <li><i class="fa fa-circle" aria-hidden="true"></i>اساتید</li>
-                            <li><i class="fa fa-circle" aria-hidden="true"></i>دانشجوبان</li>
-                            <li><i class="fa fa-circle" aria-hidden="true"></i>کارکنان</li>
+                            <li><i class="fa fa-circle text-info" aria-hidden="true"></i>کاربران آنلاین: <span class="text-info"><%= analytics["online"] %></span></li>
+                            <li><i class="fa fa-circle text-info" aria-hidden="true"></i>امروز: <span class="text-info"><%= analytics["today"] %></span></li>
+                            <li><i class="fa fa-circle text-info" aria-hidden="true"></i>هفته گذشته: <span class="text-info"><%= analytics["last_week"] %></span></li>
+                            <li><i class="fa fa-circle text-info" aria-hidden="true"></i>ماه کذشته: <span class="text-info"><%= analytics["last_month"] %></span></li>
+                            <li><i class="fa fa-circle text-info" aria-hidden="true"></i>کل: <span class="text-info"><%= analytics["total"] %></span></li>
                         </ul>
                     </div>
     
                     <div class="active-systems col-12 col-md-6 order-md-2 float-right">
                         <h4>وضعیت فعال بودن سامانه های دانشکاه</h4>
                         <ul class="list-unstyled p-0">
-                            <li><a href="<%= %>"><i class="fa fa-circle" aria-hidden="true"></i>سامانه جامع آموزش</a></li>
-                            <li><a href="<%= %>"><i class="fa fa-circle" aria-hidden="true"></i>سامانه جامع آموزش</a></li>
-                            <li><a href="<%= %>"><i class="fa fa-circle" aria-hidden="true"></i>سامانه جامع آموزش</a></li>
+                            <li><a href="https://golestan.nit.ac.ir/home/Default.htm" class="<%= serviceStatus['golestan'] === true ? 'text-info' : 'text-danger'%>"><i class="fa fa-circle" aria-hidden="true"></i>سامانه گلستان</a></li>
+                            <li><a href="https://www.nit.ac.ir/" class="<%= serviceStatus['main_website'] === true ? 'text-info' : 'text-danger'%>"><i class="fa fa-circle" aria-hidden="true"></i>سایت اصلی دانشگاه</a></li>
+                            <li><a href="https://lms8.nit.ac.ir/LoginPage.aspx?ReturnUrl=%2fHomePage.aspx" class="<%= serviceStatus['lms'] === true ? 'text-info' : 'text-danger'%>"><i class="fa fa-circle" aria-hidden="true"></i>سیستم مدیریت یادگیری الکترونیکی</a></li>
+                            <li><a href="http://food.nit.ac.ir/" class="<%= serviceStatus['food'] === true ? 'text-info' : 'text-danger'%>"><i class="fa fa-circle" aria-hidden="true"></i>سیستم اتوماسیون تغذیه</a></li>
                         </ul>
                     </div>
                 </div>
                 
             </div>  
         </section>
+
 
 
     </main>
