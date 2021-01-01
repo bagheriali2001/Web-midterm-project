@@ -14,11 +14,15 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/navigation.css">
         <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/error.css">
+
         </head>
     
-        <body>  
-            <h3>لطفا ابتدا وارد شوید.</h3>
-            <a href="/login">ورود</a>
+        <body class="body">  
+            <h3 class="container d-flex justify-content-center py-5">لطفا ابتدا وارد شوید.</h3>
+            <div class="conainer d-flex justify-content-center">
+                <a href="/login"><button type="button" class="btn btn-primary">ورود</button></a>
+            </div>
         </body>
     </html>
     
@@ -40,11 +44,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/error.css">
+
     </head>
 
-    <body>  
-        <h3>شما اجازه دسترسی به این صفحه را ندارید.</h3>
-        <a href="/addnews">صفحه اصلی</a>
+    <body class="body">  
+        <h3 class="container d-flex justify-content-center py-5">شما اجازه دسترسی به این صفحه را ندارید.</h3>
+
+        <div class="conainer d-flex justify-content-center">
+            <a href="/addnews"><button type="button" class="btn btn-primary">صفحه اصلی</button></a>
+        </div>
     <%- include('../includes/end.ejs') %>
 
 <% } %>

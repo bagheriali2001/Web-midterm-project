@@ -1,7 +1,15 @@
 <%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="css/error.css">
+
 </head>
 
 <body>
-    <h1>Page Not Found!</h1>
+    <h1 class="container d-flex justify-content-center py-5">صفحه‌ای که دنبال آن بودید پیدا نشد!</h1>
+    <div class="conainer d-flex justify-content-center">
+        <a href="/home"><button type="button" class="btn btn-primary">صفحه اصلی</button></a>
+    </div>
+    <div class="conainer d-flex justify-content-center">
+        <img src="images/error/404.png" class="error-img" alt="404 error">
+    </div>
 
 <%- include('includes/end.ejs') %>

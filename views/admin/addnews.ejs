@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/error.css">
+
     </head>
 
-    <body>  
-        <h3>لطفا ابتدا وارد شوید.</h3>
-        <a href="/login">ورود</a>
+    <body class="body">  
+        <h3 class="container d-flex justify-content-center py-5">لطفا ابتدا وارد شوید.</h3>
+        <div class="conainer d-flex justify-content-center">
+            <a href="/login"><button type="button" class="btn btn-primary">ورود</button></a>
+        </div>
     </body>
 </html>
 
@@ -52,12 +56,12 @@
 
                         <div class="form-group">
                             <label for="text">متن خبر:</label>
-                            <textarea class="form-control" rows="3"  name="text" id="text"></textarea>
+                            <textarea class="form-control" rows="6"  name="text" id="text"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="text">آدرس تصویر :</label>
-                            <input class="form-control" rows="3"  name="img" id="img">
+                            <input class="form-control" name="img" id="img">
                         </div>
                         
                         <div class="form-group">
