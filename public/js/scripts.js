@@ -55,6 +55,18 @@ $(function() {
             submitBtn.prop("disabled", true);
         }
     });
+    
+    let changePassSubmit = $("#changePassSubmit");
+    $("#newPassword").change(function() {
+        let first = $("#newPassword0").val();
+        let second = $(this).val();
+
+        if(first === second) {
+            changePassSubmit.prop("disabled", false);
+        } else {
+            changePassSubmit.prop("disabled", true);
+        }
+    });
 
 
 });
