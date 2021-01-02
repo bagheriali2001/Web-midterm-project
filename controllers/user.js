@@ -29,37 +29,37 @@ exports.introductionPage = (req, res, next) => {
     res.render('user/introduction', {
         pageTitle: 'معرفی مرکز و اهداف',
         path: '/introduction'
-    });
-};
+    })
+}
 
 exports.staffPage = (req, res, next) => {
     res.render('user/staff', {
         pageTitle: 'معرفی افراد و پرسنل',
         path: '/staff',
         staff: []
-    });
-};
+    })
+}
 
 exports.principalsPage = (req, res, next) => {
     res.render('user/principals', {
         pageTitle: 'روسای مرکز از ابتدا تا کنون',
         path: '/principals'
-    });
-};
+    })
+}
 
 exports.principlesPage = (req, res, next) => {
     res.render('user/principles', {
         pageTitle: 'قوانین و آیین نماه های حوزه فناوری اطالعات',
         path: '/principles'
-    });
-};
+    })
+}
 
 exports.contactPage = (req, res, next) => {
     res.render('user/contact', {
         pageTitle: 'ارتباط با مرکز',
         path: '/contact'
-    });
-};
+    })
+}
 
 exports.addContactPost = (req, res, next) => {
     const name = req.body.name
@@ -83,8 +83,8 @@ exports.cooperationPage = (req, res, next) => {
     res.render('user/cooperation', {
         pageTitle: 'دعوت به همکاری',
         path: '/cooperation'
-    });
-};
+    })
+}
 
 exports.addCooperationPost = (req, res, next) => {
     const name = req.body.name
@@ -115,11 +115,11 @@ exports.homePage = (req, res, next) => {
             serviceStatus: serviceStatus,
             pageTitle: 'وب سایت مرکز فناوری اطالعات دانشگاه صنعتی نوشیروانی بابل',
             path: '/home'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.getOneNews = (req, res, next) =>{
     const newsId = req.params.newsId
@@ -142,11 +142,11 @@ exports.guidePage = (req, res, next) => {
             guides : guides,
             pageTitle: 'راهنمای کاربران',
             path: '/guide'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.servicesPage = (req, res, next) => {
     Service.findAll()
@@ -155,8 +155,8 @@ exports.servicesPage = (req, res, next) => {
                 services : services,
                 pageTitle: 'خدمات فناوری اطلاعات دانشگاه',
                 path: '/services'
-            });
+            })
         }).catch(err => {
             console.log(err)
         })
-};
+}

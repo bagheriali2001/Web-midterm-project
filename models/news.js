@@ -33,6 +33,6 @@ const News = sequelize.define('news', {
         type: Sequelize.STRING,
         allowNull: false
     }
-});
+})
 
 module.exports = News

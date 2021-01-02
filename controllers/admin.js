@@ -12,9 +12,8 @@ exports.addnewsGet = (req, res, next) => {
         isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن خبر',
         path: '/addnews'
-    });
-};
-
+    })
+}
 exports.addnewsPost = (req, res, next) => {
     const title = req.body.title
     const description = req.body.description
@@ -35,8 +34,7 @@ exports.addnewsPost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
-
+}
 exports.contactRequest = (req, res, next) => {
     Contact.findAll( { order: [['id', 'DESC']]})
     .then(contacts => {
@@ -46,12 +44,11 @@ exports.contactRequest = (req, res, next) => {
             contacts : contacts,
             pageTitle: 'درخواست های تماس',
             path: '/contactRequest'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
 }
-
 exports.cooperationRequest = (req, res, next) => {
     Cooperation.findAll( { order: [['id', 'DESC']]})
     .then(cooperations => {
@@ -61,7 +58,7 @@ exports.cooperationRequest = (req, res, next) => {
             cooperations : cooperations,
             pageTitle: 'درخواست های همکاری',
             path: '/cooperationRequest'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
@@ -76,7 +73,7 @@ exports.services = (req, res, next) => {
             services : services,
             pageTitle: 'لیست خدمات',
             path: '/services'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
@@ -88,8 +85,8 @@ exports.addserviceGet = (req, res, next) => {
         isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن خدمات',
         path: '/addservice'
-    });
-};
+    })
+}
 
 exports.addservicePost = (req, res, next) => {
     const name = req.body.name
@@ -119,7 +116,7 @@ exports.addservicePost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.guides = (req, res, next) => {
     Guide.findAll( { order: [['id', 'DESC']]})
@@ -130,7 +127,7 @@ exports.guides = (req, res, next) => {
             guides : guides,
             pageTitle: 'لیست راهنما ها',
             path: '/guides'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
@@ -142,8 +139,8 @@ exports.addguideGet = (req, res, next) => {
         isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'اضافه کردن راهنما',
         path: '/addguide'
-    });
-};
+    })
+}
 
 exports.addguidePost = (req, res, next) => {
     const title = req.body.title
@@ -171,7 +168,7 @@ exports.addguidePost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.addguideandserviceGet = (req, res, next) => {
     var serviceList
@@ -189,11 +186,11 @@ exports.addguideandserviceGet = (req, res, next) => {
             guides : guideList,
             pageTitle: 'اتصال راهنما ها و خدمات',
             path: '/addguideandservice'
-        });
+        })
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.addguideandservicePost = (req, res, next) => {
     const serviceId = req.body.service
@@ -213,4 +210,4 @@ exports.addguideandservicePost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}

@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require('express')
 
 const userController = require('../controllers/user')
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/introduction' , userController.introductionPage)
 
@@ -28,5 +28,5 @@ router.get('/guide' , userController.guidePage)
 
 router.get('/services' , userController.servicesPage)
 
-router.get('/', (req, res) => {res.redirect('/home');})
+router.get('/', (req, res) => {res.redirect('/home')})
 module.exports = router;

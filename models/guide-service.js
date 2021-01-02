@@ -9,6 +9,6 @@ const GuideService = sequelize.define('guideService', {
         allowNull: false,
         primaryKey: true
     }
-});
+})
 
 module.exports = GuideService

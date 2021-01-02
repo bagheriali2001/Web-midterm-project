@@ -8,9 +8,9 @@ exports.loginGet = (req, res, next) => {
         res.render('auth/login', {
             pageTitle: 'ورود',
             path: '/login'
-        });
+        })
     }
-};
+}
 
 exports.loginPost = (req, res, next) => {
     const adminUsername = req.body.username
@@ -30,14 +30,14 @@ exports.loginPost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.logoutGet = (req, res, next) => {
     req.session.destroy( err =>{
         console.log(err)
         res.redirect('/home')
     })
-};
+}
 
 exports.addAdminGet = (req, res, next) => {
     res.render('auth/addAdmin', {
@@ -45,8 +45,8 @@ exports.addAdminGet = (req, res, next) => {
         isSuperAdmin: req.session.isSuperAdmin,
         pageTitle: 'تعریف ادمین جدید',
         path: '/addadmin'
-    });
-};
+    })
+}
 
 exports.addAdminPost = (req, res, next) => {
     var username = req.body.username
@@ -62,7 +62,7 @@ exports.addAdminPost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}
 
 exports.changePasswordGet = (req, res, next) => {
     res.render('auth/changePassword', {
@@ -71,8 +71,8 @@ exports.changePasswordGet = (req, res, next) => {
         username: req.session.username,
         pageTitle: 'تغییر رمز',
         path: '/changepassword'
-    });
-};
+    })
+}
 
 exports.changePasswordPost = (req, res, next) => {
     const username = req.session.username
@@ -87,4 +87,4 @@ exports.changePasswordPost = (req, res, next) => {
     }).catch(err => {
         console.log(err)
     })
-};
+}

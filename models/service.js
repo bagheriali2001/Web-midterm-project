@@ -45,6 +45,6 @@ const Service = sequelize.define('service', {
         type: Sequelize.BOOLEAN,
         allowNull: false
     }
-});
+})
 
 module.exports = Service

@@ -33,6 +33,9 @@
                             <li class="nav-item <%= path === '/cooperationRequest' ? 'active' : ''%>">
                                 <a class="nav-link" href="/cooperationRequest">درخواست های همکاری</a>
                             </li>
+                            <li class="nav-item <%= path === '/changePassword' ? 'active' : ''%>">
+                                <a class="nav-link" href="/changePassword">تغییر رمز</a>
+                            </li>
                             <% if (isSuperAdmin) { %>
                             <li class="nav-item <%= path === '/addadmin' ? 'active' : ''%>">
                                 <a class="nav-link" href="/addadmin">ایجاد مدیر جدید</a>

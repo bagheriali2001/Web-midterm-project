@@ -25,6 +25,6 @@ const Contact = sequelize.define('contact', {
         type: Sequelize.STRING,
         allowNull: false
     }
-});
+})
 
 module.exports = Contact

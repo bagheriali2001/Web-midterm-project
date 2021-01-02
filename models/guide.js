@@ -41,6 +41,6 @@ const Guide = sequelize.define('guide', {
         type: Sequelize.BOOLEAN,
         allowNull: false
     }
-});
+})
 
 module.exports = Guide

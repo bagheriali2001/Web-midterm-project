@@ -29,6 +29,6 @@ const Cooperation = sequelize.define('cooperation', {
         type: Sequelize.STRING,
         allowNull: false
     }
-});
+})
 
 module.exports = Cooperation

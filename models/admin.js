@@ -26,6 +26,6 @@ const Admin = sequelize.define('admin', {
         type: Sequelize.BOOLEAN,
         allowNull: false
     }
-});
+})
 
 module.exports = Admin
