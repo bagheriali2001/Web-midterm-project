@@ -1,2 +1,2 @@
 # Web-midterm-project
-Noshirvani institute OF technology, information technology center website, using Node.js and EJS
+Noshirvani institute of technology, information technology center website, using Node.js and EJS
